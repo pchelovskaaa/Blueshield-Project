@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueShield — Калькулятор поліса</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">🛡</span>
+      <span>BlueShield страхування</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="types.html">Види страхування</a>
+      <a href="calculator.html">Калькулятор</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-card card">
+        <span class="badge">Швидкий розрахунок</span>
+        <h1>Калькулятор страхового поліса</h1>
+        <p>Оберіть тип страхування, вкажіть страхову суму, термін дії поліса та додаткові послуги. Система миттєво покаже орієнтовну вартість оформлення за внутрішньою моделлю BlueShield.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="calc-wrap card">
+        <div class="form-grid">
+          <div class="field">
+            <label for="insuranceType">Тип страхування</label>
+            <select id="insuranceType">
+              <option value="">Оберіть тип</option>
+              <option value="auto">Автострахування</option>
+              <option value="travel">Туристичне страхування</option>
+              <option value="health">Медичне страхування</option>
+              <option value="property">Страхування майна</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="amount">Страхова сума, грн</label>
+            <input id="amount" type="number" min="10000" step="1000" placeholder="Наприклад, 150000">
+          </div>
+          <div class="field">
+            <label for="term">Термін дії</label>
+            <select id="term">
+              <option value="">Оберіть термін</option>
+              <option value="6">6 місяців</option>
+              <option value="12">12 місяців</option>
+              <option value="24">24 місяці</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label>Додаткові послуги</label>
+            <div class="addons-grid">
+              <label class="addon-option"><input id="legal" type="checkbox"> <span>Юридична консультація</span></label>
+              <label class="addon-option"><input id="support" type="checkbox"> <span>Підтримка 24/7</span></label>
+              <label class="addon-option"><input id="urgent" type="checkbox"> <span>Термінове оформлення</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" onclick="calculateInsurance()">Розрахувати вартість</button>
+        </div>
+        <div class="result-box" id="result">
+          <strong>Тут з’явиться орієнтовна вартість поліса після заповнення параметрів.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>BlueShield страхування</strong><br>
+      Надійні страхові рішення для життя, подорожей, майна та транспорту.
+    </div>
+    <div class="signature">Анна Пчеловська ФТБ 4-9</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
